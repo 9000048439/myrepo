@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+   <baseURL><![CDATA[http://services.groupkt.com/]]></baseURL>
+   <service name="getUserProfile">
+      <url>country/get/iso2code/IN</url>
+      <request />
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="createUserProfile">
+      <url></url>
+      <request><![CDATA[{
+  "RestResponse" : {
+    "messages" : [ "More webservices are available at http://www.groupkt.com/post/f2129b88/services.htm", "Country found matching code [IN]." ],
+    "result" : {
+      "name" : "India",
+      "alpha2_code" : "IN",
+      "alpha3_code" : "IND"
+    }
+  }
+}]]></request>
+      <reponseType>java.lang.String</reponseType>
+      <requestType>XML</requestType>
+      <response>myresponse</response>
+      <requestAttributes>
+         <request-entry reqname="" reqvalue="" />
+         <request-entry reqname="" reqvalue="" />
+         <request-entry reqname="" reqvalue="" />
+         <request-entry reqname="" reqvalue="" />
+      </requestAttributes>
+      <reponseAttributes>
+         <response-entry resname="" resvalue="" />
+         <response-entry resname="" resvalue="" />
+         <response-entry resname="" resvalue="" />
+         <response-entry resname="" resvalue="" />
+      </reponseAttributes>
+   </service>
+<service name="cancelUserBooking">
+      <url></url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"OrderNumber":"924079",
+				"RequestorName":"hklajda",
+				"Reason":"dlsadla",
+				"RequestedThrough":"dsfsd",
+				"RefundType":"1",
+				"username":"BunyanAalpje",
+				"CurrentRefundAmount":"185"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getOrderCancelPenalty">
+      <url>customer/getOrderCancelPenalty</url>
+      <request><![CDATA[{
+				"ordernumber":"916580",
+				"tenantcode":"queenslandrail",
+				"referencetypevalue":"1"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="removeTrainItem">
+      <url>customer/removeTrainItem</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteTypeValue":2,
+				"SessionID":"85e1b7c7-4359-4e82-b642-06dc1aae781f",
+				"ConsumerID":"65e0b7c7-4359-4e82-b642-06dc1aae781f",
+				"IsConvertQuoteToCart":false,
+				"ShoppingCartID":"85e1b7c7-4359-4e82-b642-06dc1aae781f",
+				"BookingChannel":2,
+				"MembershipConsumerID":"85e0b7c7-4359-4e82-b642-06dc1aae881f"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="loadSSRDetails">
+      <url>customer/loadSSRDetails</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteId":"1"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getMyBooking">
+      <url>search/getMyBooking</url>
+      <request><![CDATA[{
+				"ordernumber":"916596",
+				"tenantcode":"queenslandrail"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getTrainServiceAvailability">
+      <url>search/getTrainServiceAvailability</url>
+      <request><![CDATA[{
+				  "TenantCode": "queenslandrail",
+				  "UserName": null,
+				  "BookingClassCode": "",
+				  "TripType": 2,
+				  "SiteID": 2,
+				  "PassengerDetails": [
+				    {
+				      "ReferenceId": 1,
+				      "Type": 1,
+				      "Age": 0,
+				      "FirstName": null,
+				      "LastName": null,
+				      "IsPrimary": false,
+				      "GenderType": 1,
+				      "TypeName": "Adult",
+				      "SubTypeName": null,
+				      "CardNumber": null,
+				      "ConcessionCode": null,
+				      "ConcessionName": null,
+				      "SubTypeID": "00000000-0000-0000-0000-000000000000",
+				      "TypeID": "00d7b9b9-604d-4a71-8f6e-2c96d26c4795",
+				      "Code": "ADT"
+				    }
+				  ],
+				  "TrainTripSearchRQ": [
+				    {
+				      "StartDate": "2016-06-28T00:00:00",
+				      "EndDate": "0001-01-01T00:00:00",
+				      "StartLocation": {
+				        "StationCode": "BNE",
+				        "StationName": "Brisbane - Roma Street"
+				      },
+				      "EndLocation": {
+				        "StationCode": "MBJ",
+				        "StationName": "Maryborough West"
+				      },
+				      "JourneyType": 0,
+				      "TrainNumber": 0,
+				      "TrainCode": null
+				    },
+				    {
+				      "StartDate": "2016-06-30T00:00:00",
+				      "EndDate": "0001-01-01T00:00:00",
+				      "StartLocation": {
+				        "StationCode": "MBJ",
+				        "StationName": "Maryborough West"
+				      },
+				      "EndLocation": {
+				        "StationCode": "CNS",
+				        "StationName": "Cairns"
+				      },
+				      "JourneyType": 0,
+				      "TrainNumber": 0,
+				      "TrainCode": null
+				    }
+				  ],
+				  "NumberofAdults": 0,
+				  "NumberofChildren": 0,
+				  "NoOfOthers": 0,
+				  "NoOfRooms": 0,
+				  "NoOfMalePassenger": 0,
+				  "NoOfFemalePassenger": 0
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getTrainDetails">
+      <url>search/getTrainDetails</url>
+      <request><![CDATA[{
+				"ordernumber":"916596",
+				"tenantcode":"queenslandrail"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getMealByTrainMealID">
+      <url>search/getMealByTrainMealID</url>
+      <request><![CDATA[{
+				"TenantCode": "queenslandrail",
+				"TrainMealId": "f17c2019-a6bf-4f71-9361-2c44bcf7cb9d"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getMealByTrainName">
+      <url>search/getMealByTrainName</url>
+      <request><![CDATA[{
+				"TenantCode": "queenslandrail",
+				"TrainName": " The Spirit of the Outback-457, Rez_Train"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getTrainServiceList">
+      <url>search/getTrainServiceList</url>
+      <request><![CDATA[{
+				"TenantCode": "queenslandrail",
+				"TrainName": " The Spirit of the Outback-457, Rez_Train"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getTrainFareRule">
+      <url>search/getTrainFareRule</url>
+      <request><![CDATA[{ 
+				"tenantcode":"queenslandrail", 
+				"productId":"a4c6e196-84e6-4e7e-b2ae-c9c885a86d83", 
+				"fareBasisId":"0d3811d3-aaa3-4cb5-8166-762a3802db45" 
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="deleteCartItem">
+      <url>checkout/deleteCartItem</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SessionId":"18effad8-b5a8-4d8e-9988-fad20c07707d",
+				"ProductTransactionDetailID": "18effad8-b5a8-4d8e-9988-fad20c07767d"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="viewCartItems">
+      <url>checkout/viewCartItems</url>
+      <request><![CDATA[{
+				"TenantCode": "queenslandrail",
+				"SessionId": "18effad8-b5a8-4d8e-9988-fad20c07707d"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="addToCart">
+      <url>checkout/addToCart</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteId":2,
+				"ConsumerID":"",
+				"AgencyID":"",
+				"AgencyPersonID":"",
+				"RailAttributes":
+				{"RailTrips":
+				[{"ArrivalDateTime":"2016-07-08T06:00:00",
+				"DepartureDateTime":"2016-07-08T09:00:00",
+				"JourneyType":1,
+				"ArrivalStationName":"Brisbane - Roma Street",
+				"DepartureStationName":"Maryborough West",
+				"SegmentList":[
+				{"Distance":267.0,
+				"Duration":"00:00:00",
+				"ServiceDetailID":"613de6b3-490c-4f18-9781-545679dea59b",
+				"TrainServiceType":1,
+				"TrainCode":"QTT 512",
+				"PassengerDetails":[
+				{"Code":"ADT",
+				"FareClassCode":"YA",
+				"Gender":1,
+				"HonorificType":"",
+				"PassengerID":"00000000-0000-0000-0000-000000000000",
+				"ReferenceID":1,
+				"Type":1,
+				"TyepName":"Adult",
+				"TypeID":"00d7b9b9-604d-4a71-8f6e-2c96d26c4795",
+				"FareClassID":"af960d14-a3ef-4965-8e7e-5b2a592c95d7",
+				"TransactionBasePrice":
+				{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"TotalSellPrice":75.0,
+				"SupplierPenaltyAmount":0.0,
+				"SupplierNetPrice":75.0},
+				"TransactionBuyingPrice":
+				{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"TotalSellPrice":75.0,
+				"SupplierPenaltyAmount":0.0,
+				"SupplierNetPrice":75.0},
+				"TransactionSellPrice":{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"TotalSellPrice":75.0,
+				"SupplierPenaltyAmount":0.0,
+				"SupplierNetPrice":75.0},
+				"SeatingsList":
+				[{"CarriageID":"e1ece0d5-2464-48af-85e0-4b68101dd396",
+				"CarriageName":"s",
+				"ConsistCarriageID":"98e224a8-f986-4cd5-8ec2-280823b92eff",
+				"DestinationStation":
+				{"IsMotoRail":false,
+				"IsShortPlatform":false,
+				"Sequence":7},
+				"OriginStation":
+				{"IsMotoRail":false,
+				"IsShortPlatform":false,
+				"Sequence":7},
+				"IsSplitOrAsortted":false,
+				"PositionTypeValue":2,
+				"SeatAttributeTypeValue":0,
+				"SeatNumber":"10",
+				"SeatTypeValue":0}]}]}]}]}
+				,"TransactionPriceOfBasePrice":{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"SupplierNetPrice":75.0,
+				"TotalSellPrice":75.0},
+				"TransactionPriceOfBuyingPrice":
+				{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"SupplierNetPrice":75.0,
+				"TotalSellPrice":75.0},
+				"TransactionPriceOfSellPrice":
+				{"NetPrice":75.0,
+				"SellingPrice":75.0,
+				"SupplierNetPrice":75.0,
+				"TotalSellPrice":75.0
+			}}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="addMeal">
+      <url>checkout/addMeal</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteTypeValue":2,
+				"UserName":"UserName1757",
+				"SessionID":"b36aaeca-d540-4d47-9adf-0fee058ddad7",
+				"IsQuote":false,
+				"QuoteID":"00000000-0000-0000-0000-000000000000",
+				"BookingChannel":2,
+				"ProductTransactionalDetailID":"a510320a-0901-40a9-a460-c8d51a96a495"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getCreditCardDetails">
+      <url>checkout/getCreditCardDetails</url>
+      <request><![CDATA[{
+				"tenantcode":"queenslandrail",
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getPrepaidMeal">
+      <url>checkout/getPrepaidMeal</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteTypeValue":2,
+				"UserName":"UserName1757",
+				"SessionID":"b36aaeca-d540-4d47-9adf-0fee058ddad7",
+				"IsQuote":false,"QuoteID":"00000000-0000-0000-0000-000000000000",
+				"BookingChannel":2,
+				"ProductTransactionalDetailID":"a510320a-0901-40a9-a460-c8d51a96a495"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getPaymentPolicy">
+      <url>checkout/getPaymentPolicy</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteUrl":"preqa-qrb2c.rezopiatest.net",
+				"UserName":"aparna@test.com",
+				"CartSessionID":"00000000-0000-0000-0000-000000000000"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getBookingLookUp">
+      <url>book/getBookingLookUp</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"username":"aparna@test.com",
+				"Index":"1",
+				"Size":"10",
+				"UserId":"8e3cab43-ff6d-46ea-86cf-e43948f7b295"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getPassengerInfo">
+      <url>checkout/getPassengerInfo</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteUrl":"preqa-qrb2c.rezopiatest.net",
+				"UserName":"aparna@test.com",
+				"CartSessionID":"8ac90322-1ea3-4944-9317-bfe09cfb1caf"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getBookingAttribute">
+      <url>checkout/getBookingAttribute</url>
+      <request><![CDATA[{
+				"bookingAttributes":
+				[{
+				"AttributeID":"5bce1b17-f4cc-4479-a984-1940defba544",
+				"DisplayName":"Warrant Number",
+				"DisplaySequence":55,
+				"ControlType":6,
+				"IsMandatory":true,
+				"ValidValues":"",
+				"PassengetTypeId":"00000000-0000-0000-0000-000000000000",
+				"controlName":"Account_Other_Warrant_Number"
+				},{
+				"AttributeID":"e3b35ade-ce8f-4173-bd4e-6c7c644e5d31",
+				"DisplayName":"Warrant Number",
+				"DisplaySequence":55,
+				"ControlType":6,
+				"IsMandatory":true,
+				"ValidValues":"",
+				"PassengetTypeId":"00d7b9b9-604d-4a71-8f6e-2c96d26c4795",
+				"controlName":"Hospital_Staff_Warrant_Number"
+				}],
+				"Status":"Success",
+				"ErrorCode":null,
+				"ErrorMessage":null
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getBookingInfo">
+      <url>checkout/getBookingInfo</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"UserName":"shilpavishwanath",
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getTrainViewDetails">
+      <url>checkout/getTrainViewDetails</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"UserName":"ashwin.j@sonata-software.com",
+				"ProductTransactionID":"47a352fe-c907-402a-96d5-79e091367836"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getExtensionAttribute">
+      <url>checkout/getExtensionAttribute</url>
+      <request><![CDATA[{
+				"tenantCode":"queenslandrail",
+				"siteType":2,
+				"productID":"5a93cfa8-47ff-40c4-b920-e950cc55b54f"
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getCheckoutLogin">
+      <url>checkout/getCheckoutLogin</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteTypeValue":2,
+				"SessionID":"b36aaeca-d540-4d47-9adf-0fee058ddad7",
+				"username":"UserName1757",
+				"IsQuote":false,
+				"QuoteID":"00000000-0000-0000-0000-000000000000",
+				"BookingChannel":2
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getCheckoutGuest">
+      <url>checkout/getCheckoutGuest</url>
+      <request><![CDATA[{
+				"TenantCode":"queenslandrail",
+				"SiteTypeValue":2,
+				"SessionID":" b36aaeca-d540-4d47-9adf-0fee058ddad7 ",
+				"IsQuote":false,"QuoteID":"00000000-0000-0000-0000-000000000000",
+				"BookingChannel":2
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getSaveMeal">
+      <url>checkout/getSaveMeal</url>
+      <request><![CDATA[{
+				"ProductSegmentTransactionDetailID": "b214d1db-0ffc-44de-8cda-3928cadd5112",
+				"ProductTransactionDetailMealD": "0434acd6-b490-4419-9d3e-1252c23ff8b2",
+				"ProductTransactionDetailPassengerID": "b325d2da-4c3a-4ae8-ad6f-47a2e6f9815d",
+				"ProductTransactionalDetailID": "af7d91eb-03db-4cf0-a59f-a5e0ee06a299",
+				"TenantCode": "queenslandrail",
+				"SiteTypeValue": 2,
+				"UserName": "UserName1757",
+				"IsQuote ": false,
+				"QuoteID ": "00000000 - 0000 - 0000 - 0000 - 000000000000 ",
+				"BookingChannel ": 2
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="getDeleteMeal">
+      <url>checkout/getDeleteMeal</url>
+      <request><![CDATA[{
+				"ProductSegmentTransactionDetailID": "b214d1db-0ffc-44de-8cda-3928cadd5112",
+				"ProductTransactionDetailMealD": "b7956340-a887-4e65-9091-9d51408a502a",
+				"ProductTransactionDetailPassengerID": "b325d2da-4c3a-4ae8-ad6f-47a2e6f9815d",
+				"ProductTransactionalDetailID": "af7d91eb-03db-4cf0-a59f-a5e0ee06a299",
+				"TenantCode": "queenslandrail",
+				"SiteTypeValue": 2,
+				"UserName": "UserName1757â€",
+				"IsQuote": false,
+				"QuoteID": "00000000 - 0000 - 0000 - 0000 - 000000000000 ",
+				"BookingChannel ": 2
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+   <service name="createbooking">
+      <url>checkout/createbooking</url>
+      <request><![CDATA[{
+				"TenantCode": "queenslandrail",
+				"SiteUrl": "localhost",
+				"UserName": "sekar@mail.com",
+				"CartSessionID": "00000000-0000-0000-0000-000000000000",
+				"TransactionInfo": [{
+					"ProductTransactionDetailID": "00000000-0000-0000-0000-000000000000",
+					"PassengerInfoList": [{
+						"Title": 1,
+						"FirstName": "FirstName1",
+						"LastName": "LastName1",
+						"Age": "12",
+						"Gender": 1,
+						"PassengerType": 1,
+						"SeatPreference": 1,
+						"ProductTransactionDetailPassengerID": "00000000-0000-0000-0000-000000000000",
+						"SegmentTransactionDetailID": "00000000-0000-0000-0000-000000000000",
+						"SSRID": "00000000-0000-0000-0000-000000000000"
+					}, {
+						"Title": 2,
+						"FirstName": "FirstName",
+						"LastName": "LastName",
+						"Age": "16",
+						"Gender": 2,
+						"PassengerType": 3,
+						"SeatPreference": 2,
+						"ProductTransactionDetailPassengerID": "00000000-0000-0000-0000-000000000000",
+						"SegmentTransactionDetailID": "00000000-0000-0000-0000-000000000000",
+						"SSRID": "00000000-0000-0000-0000-000000000000"
+					}]
+				}],
+				"PaymentMethod": 3,
+				"PaymentType": 1,
+				"PolicyID": "POLICY_1",
+				"CreditCardInfo": {
+					"CardType": 2,
+					"CardHolderName": "CardHolderName",
+					"CardNumber": "CardNumber",
+					"CVVNumber": "CVVNumber",
+					"ExpirationMonth": "05",
+					"ExpirationYear": "2017"
+				},
+				"ExtensionAttributes": [{
+					"ProductTransactionDetailID": "00000000-0000-0000-0000-000000000000",
+					"ProductTransactionDetailPassengerID": "00000000-0000-0000-0000-000000000000",
+					"AttributeID": "00000000-0000-0000-0000-000000000000",
+					"SelectedValues": "fsafsadf"
+				}, {
+					"ProductTransactionDetailID": "00000000-0000-0000-0000-000000000000",
+					"ProductTransactionDetailPassengerID": "00000000-0000-0000-0000-000000000000",
+					"AttributeID": "00000000-0000-0000-0000-000000000000",
+					"SelectedValues": "fsafsadf"
+				}],
+				"BillingInfo": {
+					"FirstName": "FirstName",
+					"LastName": "LastName",
+					"Email": "Email",
+					"Home": "1312",
+					"Address1": "add1",
+					"Address2": "add2",
+					"Country": "Country",
+					"State": "State",
+					"City": "city",
+					"ZipPostalCode": "ZipPostalCode",
+					"PhoneList": [{
+						"ContactPhoneId": "00000000-0000-0000-0000-000000000000",
+						"PhoneNumber": "3123213",
+						"PhoneType": 4,
+						"ExtensionCode": "32"
+					}, {
+						"ContactPhoneId": "00000000-0000-0000-0000-000000000000",
+						"PhoneNumber": "3123213",
+						"PhoneType": 2,
+						"ExtensionCode": "32"
+					}],
+					"ProfileUpdateRequired": false
+				}
+			}]]></request>
+      <reponseType>java.lang.String</reponseType>
+   </service>
+</services>

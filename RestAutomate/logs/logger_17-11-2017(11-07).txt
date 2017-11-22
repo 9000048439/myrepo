@@ -1,0 +1,648 @@
+[TestNG] Running:
+  E:\CodingPractice\RestAutomate\testng.xml
+
+************ Loading configuration file ************
+************ SDCP_B2C_Cart_Operations_Test testcases started ************
+/cart/addToCart
+Given Request {
+							"partyId":"10000",
+							"productId": "2642648",
+							"quantity": "1"
+							}
+Given Response {
+							"isError": "false",
+							"ShoppingList": {
+							"lastUpdatedStamp": 1510234245000,
+							"recurrenceInfoId": null,
+							"parentShoppingListId": null,
+							"createdTxStamp": 1510234245000,
+							"createdStamp": 1510234245000,
+							"productPromoCodeId": null,
+							"description": null,
+							"lastUpdatedTxStamp": 1510234245000,
+							"isActive": "Y",
+							"shoppingListTypeId": "SLT_SPEC_PURP",
+							"contactMechId": null,
+							"carrierPartyId": null,
+							"shoppingListId": "52750",
+							"currencyUom": null,
+							"lastOrderedDate": null,
+							"carrierRoleTypeId": null,
+							"paymentMethodId": null,
+							"isPublic": "N",
+							"productStoreId": "Globus_STORE",
+							"listName": "auto-save",
+							"lastAdminModified": null,
+							"partyId": "10001",
+							"shipmentMethodTypeId": null,
+							"visitorId": null
+							},
+							"status": "pass"
+							}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/cart/addToCart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "partyId": "10000",
+    "productId": "2642648",
+    "quantity": "1"
+}
+HTTP/1.1 404 Not Found
+Server: Apache-Coyote/1.1
+Content-Length: 0
+Date: Fri, 17 Nov 2017 05:37:34 GMT
+/cart/addToCart
+Given Request {
+							"partyId":"10000",
+							"productId": "2642648",
+							"quantity": "1"
+							}
+Given Response {
+							"isError": "false",
+							"ShoppingList": {
+							"lastUpdatedStamp": 1510234245000,
+							"recurrenceInfoId": null,
+							"parentShoppingListId": null,
+							"createdTxStamp": 1510234245000,
+							"createdStamp": 1510234245000,
+							"productPromoCodeId": null,
+							"description": null,
+							"lastUpdatedTxStamp": 1510234245000,
+							"isActive": "Y",
+							"shoppingListTypeId": "SLT_SPEC_PURP",
+							"contactMechId": null,
+							"carrierPartyId": null,
+							"shoppingListId": "52750",
+							"currencyUom": null,
+							"lastOrderedDate": null,
+							"carrierRoleTypeId": null,
+							"paymentMethodId": null,
+							"isPublic": "N",
+							"productStoreId": "Globus_STORE",
+							"listName": "auto-save",
+							"lastAdminModified": null,
+							"partyId": "10001",
+							"shipmentMethodTypeId": null,
+							"visitorId": null
+							},
+							"status": "pass"
+							}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/cart/addToCart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "partyId": "10000",
+    "productId": "2642648",
+    "quantity": "1"
+}
+HTTP/1.1 404 Not Found
+Server: Apache-Coyote/1.1
+Content-Length: 0
+Date: Fri, 17 Nov 2017 05:37:34 GMT
+/cart/getCart
+Given Request {"partyId":"10000"}
+Given Response {
+							"products": null,
+							"grandTotal": null,
+							"status": "pass",
+							"shoppingCartSize": 0,
+							"currency": null,
+							"errorMessage": null,
+							"visitorId": null,
+							"orderShippingTotal": null,
+							"salesTax": null,
+							"couponCode": null,
+							"couponAmount": null,
+							"loyaltyAmount": 0,
+							"error": false,
+							"shippingTotal": null
+							}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/cart/getCart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "partyId": "10000"
+}
+HTTP/1.1 404 Not Found
+Server: Apache-Coyote/1.1
+Content-Length: 0
+Date: Fri, 17 Nov 2017 05:37:34 GMT
+/cart/getCart
+Given Request {"partyId":"10000"}
+Given Response {
+							"products": null,
+							"grandTotal": null,
+							"status": "pass",
+							"shoppingCartSize": 0,
+							"currency": null,
+							"errorMessage": null,
+							"visitorId": null,
+							"orderShippingTotal": null,
+							"salesTax": null,
+							"couponCode": null,
+							"couponAmount": null,
+							"loyaltyAmount": 0,
+							"error": false,
+							"shippingTotal": null
+							}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/cart/getCart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "partyId": "10000"
+}
+HTTP/1.1 404 Not Found
+Server: Apache-Coyote/1.1
+Content-Length: 0
+Date: Fri, 17 Nov 2017 05:37:34 GMT
+/cart/getCart
+Given Request {"partyId":"10000"}
+Given Response {
+							"products": null,
+							"grandTotal": null,
+							"status": "pass",
+							"shoppingCartSize": 0,
+							"currency": null,
+							"errorMessage": null,
+							"visitorId": null,
+							"orderShippingTotal": null,
+							"salesTax": null,
+							"couponCode": null,
+							"couponAmount": null,
+							"loyaltyAmount": 0,
+							"error": false,
+							"shippingTotal": null
+							}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/cart/getCart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "partyId": "10000"
+}
+HTTP/1.1 404 Not Found
+Server: Apache-Coyote/1.1
+Content-Length: 0
+Date: Fri, 17 Nov 2017 05:37:34 GMT
+************ SDCP_B2C_Cart_Operations_Test Testcases Completed ************
+************ Loading configuration file ************
+************ SDCP_B2C_User_Operations_Tests testcases started ************
+http://localhost/globus/user/userLogin
+Given Request {
+
+				"userName":"vpn1@gmail.com",
+
+      			 "password":"sonata"
+
+			}
+Given Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/globus/user/userLogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "userName": "vpn1@gmail.com",
+    "password": "sonata"
+}
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 120
+Date: Fri, 17 Nov 2017 05:37:35 GMT
+
+{
+    "partyId": "10090",
+    "userId": "vpn1@gmail.com",
+    "status": "Pass",
+    "error": "No",
+    "message": "Login Success",
+    "responseList": null
+}
+http://localhost/globus/user/userLogin
+Given Request {
+
+				"userName":"vpn1@gmail.com",
+
+      			 "password":"sonata"
+
+			}
+Given Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/globus/user/userLogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "userName": "vpn1@gmail.com",
+    "password": "sonata"
+}
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 120
+Date: Fri, 17 Nov 2017 05:37:35 GMT
+
+{
+    "partyId": "10090",
+    "userId": "vpn1@gmail.com",
+    "status": "Pass",
+    "error": "No",
+    "message": "Login Success",
+    "responseList": null
+}
+http://localhost/globus/user/userLogin
+Given Request {
+
+				"userName":"vpn1@gmail.com",
+
+      			 "password":"sonata"
+
+			}
+Given Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/globus/user/userLogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "userName": "vpn1@gmail.com",
+    "password": "sonata"
+}
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 120
+Date: Fri, 17 Nov 2017 05:37:35 GMT
+
+{
+    "partyId": "10090",
+    "userId": "vpn1@gmail.com",
+    "status": "Pass",
+    "error": "No",
+    "message": "Login Success",
+    "responseList": null
+}
+http://localhost/globus/user/userLogin
+Given Request {
+
+				"userName":"vpn1@gmail.com",
+
+      			 "password":"sonata"
+
+			}
+Given Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/globus/user/userLogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "userName": "vpn1@gmail.com",
+    "password": "sonata"
+}
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 120
+Date: Fri, 17 Nov 2017 05:37:36 GMT
+
+{
+    "partyId": "10090",
+    "userId": "vpn1@gmail.com",
+    "status": "Pass",
+    "error": "No",
+    "message": "Login Success",
+    "responseList": null
+}
+userLoginService Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+http://localhost/globus/user/userLogin
+Given Request {
+
+				"userName":"vpn1@gmail.com",
+
+      			 "password":"sonata"
+
+			}
+Given Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+Given Request Type POST
+Given Status Code 200
+Request method:	POST
+Request path:	http://localhost:80/globus/user/userLogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Body:
+{
+    "userName": "vpn1@gmail.com",
+    "password": "sonata"
+}
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 120
+Date: Fri, 17 Nov 2017 05:37:36 GMT
+
+{
+    "partyId": "10090",
+    "userId": "vpn1@gmail.com",
+    "status": "Pass",
+    "error": "No",
+    "message": "Login Success",
+    "responseList": null
+}
+userLoginService Response {"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}
+************ SDCP_B2C_User_Operations_Tests Testcases Completed ************
+Request method:	GET
+Request path:	http://localhost:9999/rest/people
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Authorization=Basic dXNlcjpwYXNz
+				Accept=*/*
+Cookies:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Language: en-IN
+Content-Type: application/json; charset=UTF-8
+Pragma: no-cache
+Cache-Control: no-cache, no-store, max-age=0
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26)
+
+{
+    "people": [
+        {
+            "name": "John Doe",
+            "id": 1,
+            "organisation": "Spidertracks"
+        },
+        {
+            "name": "Jane Doe",
+            "id": 2,
+            "organisation": "Spidertracks"
+        },
+        {
+            "name": "Joshua Teller",
+            "id": 3,
+            "organisation": "FAA"
+        },
+        {
+            "name": "Kumara",
+            "id": 4,
+            "organisation": "SonataSoftware"
+        }
+    ]
+}
+Request method:	GET
+Request path:	http://localhost:9999/rest/people
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+				Accept=*/*
+Cookies:		<none>
+Body:			<none>
+HTTP/1.1 401 Bad credentials
+WWW-Authenticate: Basic realm="Spring Security Application"
+Content-Type: text/html; charset=iso-8859-1
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Length: 1388
+Server: Jetty(6.1.26)
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <title>Error 401 Bad credentials</title>
+  </head>
+  <body>
+    <h2>HTTP ERROR 401</h2>
+    <p>Problem accessing /rest/people. Reason:
+</p>
+    <pre>    Bad credentials</pre>
+    <hr/>
+    <i>
+      <small>Powered by Jetty://</small>
+    </i>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+  </body>
+</html>
+Request method:	POST
+Request path:	http://localhost:9999/rest/people
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Authorization=Basic dXNlcjpwYXNz
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-16
+Cookies:		<none>
+Body:
+{
+    "id": 0,
+    "name": "Kumara",
+    "organisation": "SonataSoftware"
+}
+HTTP/1.1 400 Bad Request
+Content-Language: en-IN
+Content-Type: application/json; charset=UTF-8
+Pragma: no-cache
+Cache-Control: no-cache, no-store, max-age=0
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26)
+
+{
+    "message": "Person name=Kumara, organisation=SonataSoftware already exists."
+}
+Request method:	POST
+Request path:	http://localhost:9999/rest/people
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Headers:		Authorization=Basic dXNlcjp3cm9uZ3Bhc3M=
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-16
+Cookies:		<none>
+Body:
+{
+    "id": 0,
+    "name": "Kumara",
+    "organisation": "SonataSoftware"
+}
+HTTP/1.1 401 Bad credentials
+WWW-Authenticate: Basic realm="Spring Security Application"
+Content-Type: text/html; charset=iso-8859-1
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Length: 1388
+Server: Jetty(6.1.26)
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <title>Error 401 Bad credentials</title>
+  </head>
+  <body>
+    <h2>HTTP ERROR 401</h2>
+    <p>Problem accessing /rest/people. Reason:
+</p>
+    <pre>    Bad credentials</pre>
+    <hr/>
+    <i>
+      <small>Powered by Jetty://</small>
+    </i>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+    <br clear="none"/>
+  </body>
+</html>
+
+===============================================
+Rest testing
+Total tests run: 14, Failures: 6, Skips: 0
+===============================================
+

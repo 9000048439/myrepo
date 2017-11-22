@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<baseURL><![CDATA[http://localhost/globus]]></baseURL>
+	<service name="userLoginService">
+		<url>/user/userLogin</url>
+		<request><![CDATA[{
+				"userName":"vpn1@gmail.com",
+      			 "password":"sonata"
+			}]]></request>
+		<reponseType>JSON</reponseType>
+		<requestType>POST</requestType>
+		<statusCode>200</statusCode>
+		<response><![CDATA[{"partyId":"10090","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}]]></response>
+	</service>
+	<service name="userLoginService_wrongcredentails">
+		<url>/user/userLogin</url>
+		<request><![CDATA[{
+				"userName":"vpn1@gmail.com",
+      			 "password":"sonata"
+			}]]></request>
+		<reponseType>JSON</reponseType>
+		<requestType>POST</requestType>
+		<statusCode>200</statusCode>
+		<response><![CDATA[{"partyId":"10000","userId":"vpn1@gmail.com","status":"Pass","error":"No","message":"Login Success","responseList":null}]]></response>
+	</service>
+</services>

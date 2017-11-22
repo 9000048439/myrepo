@@ -1,0 +1,81 @@
+<project name="Sample Ant build" basedir=".">
+	<!-- ========== Initialize Properties =================================== -->
+	<!-- set global properties for build -->
+	<property file="project.properties" />
+	<property name="basedir" value="./" />
+	<property name="project.dir" value="${basedir}" />
+	<property name="lib" value="${basedir}/lib" />
+	<property name="src" value="${basedir}/src" />
+	<property name="bin" value="${basedir}/bin" />
+	<property name="report-dir" value="${basedir}/Report" />
+	<tstamp>
+		  <format property="TODAY_DT" pattern="dd-MM-yyyy" locale="en,UK"/>
+		</tstamp>
+		<echo>Today started ${TODAY_DT}</echo>
+	<property name="testng-report-dir" value="${report-dir}/TestNGReport-${TODAY_DT}" />
+	<property name="jar.parent.dir" location="${basedir}/.." />
+	<!-- ====== Set the classpath ====  -->
+	<path id="classpath">
+		<pathelement location="${bin}" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${basedir}/lib/">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${basedir}/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Delete directories  -->
+	<target name="delete-dir">
+		<delete dir="${bin}" />
+	</target>
+
+	<!-- Creating directories -->
+	<target name="create" depends="delete-dir">
+		<mkdir dir="${bin}" />
+		<mkdir dir="${report-dir}" />
+	</target>
+
+	<!-- Compile the java code from ${src} into ${bin}-->
+	<target name="compile" depends="create">
+		<javac srcdir="${src}" classpathref="classpath" includeAntRuntime="No" destdir="${bin}" />
+		<echo> /* Compiled Directory Classes */ </echo>
+	</target>
+
+	<!-- Runs the file and generates Reportng report for TestNG-->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" />
+
+	<target name="testng-execution" depends="compile">
+		<echo> Automation Test Report Generation Started</echo>
+		<mkdir dir="${testng-report-dir}" />
+		<copy todir="${testng-report-dir}">
+			<fileset dir="${basedir}">
+				<include name="customized-emailable-report-${TODAY_DT}.html"/>
+				<include name="${company_logo}" />
+				<!--<include name="**/*.js" />-->
+			</fileset>
+		</copy>
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="false">
+			<xmlfileset dir="${basedir}" includes="testng.xml" />
+		</testng>
+		<echo> Automation Test Report Generation Completed</echo>
+	</target>
+
+	<target name="sendMail" depends="testng-execution">
+
+		<zip destfile="${project.dir}/ReportAttachments/report-output-${TODAY_DT}.zip" basedir="${project.dir}/Report/TestNGReport-${TODAY_DT}" zip64Mode="always"/>
+
+		<mail mailhost="smtp.gmail.com" mailport="465" subject="HackAata-RestAutomate-Sample TestReport " from="jbmca2011@gmail.com" tolist="jbmca2011@gmail.com,thrivikram.m@sonata-software.com" encoding="mime" user="jbmca2011@gmail.com" password="789456***" enableStartTLS="true" ssl="true">
+			<message>Testing Completed.Please find the attachment.</message>
+			<attachments>
+				<fileset dir="${project.dir}/ReportAttachments">
+					<include name="report-output-${TODAY_DT}.zip" />
+				</fileset>
+			</attachments>
+
+		</mail>
+	</target>
+</project>

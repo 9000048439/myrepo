@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite name="Rest testing" parallel="methods" thread-count="2"> -->
+<suite name="Rest testing" parallel="methods" thread-count="2">
+	<parameter name="pdfngreport-properties" value="pdfngreport.properties" />
+	<listeners>
+		<listener class-name="com.sonata.restautomate.framework.CustomizedEmailableReport" />
+	</listeners>
+	<test name="dependent_services_test">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.DependentServicesTest" />
+		</classes>
+	</test>
+	<test name="performance_test">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.PerformanceServicesTest" />
+		</classes>
+	</test>
+	<test name="security_services_test">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.SecureServicesTest" />
+		</classes>
+	</test>
+	<test name="Google Services">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.GoogleServiceTestes"></class>
+		</classes>
+	</test>
+	<test name="CountriesService">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.CountryServicesTest" />
+		</classes>
+	</test>
+	<test name="Json_Response_Services">
+		<classes>
+			<class name="com.sonata.restautomate.services.test.RestAssuredGPathTest"></class>
+		</classes>
+	</test>
+</suite>

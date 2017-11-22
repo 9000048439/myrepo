@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<baseURL><![CDATA[http://localhost/globus]]></baseURL>
+	<service name="getCart">
+		<url>/cart/getCart</url>
+		<request><![CDATA[{"partyId":"10000"}]]></request>
+		<reponseType>JSON</reponseType>
+		<requestType>POST</requestType>
+		<statusCode>200</statusCode>
+		<response><![CDATA[{
+							"products": null,
+							"grandTotal": null,
+							"status": "pass",
+							"shoppingCartSize": 0,
+							"currency": null,
+							"errorMessage": null,
+							"visitorId": null,
+							"orderShippingTotal": null,
+							"salesTax": null,
+							"couponCode": null,
+							"couponAmount": null,
+							"loyaltyAmount": 0,
+							"error": false,
+							"shippingTotal": null
+							}]]>
+							
+	</response>
+	</service>
+	
+	
+	<service name="addToCart">
+		<url>/cart/addToCart</url>
+		<request><![CDATA[{
+							"partyId":"10000",
+							"productId": "2642648",
+							"quantity": "1"
+							}]]></request>
+		<reponseType>JSON</reponseType>
+		<requestType>POST</requestType>
+		<statusCode>200</statusCode>
+									<response><![CDATA[{
+							"isError": "false",
+							"ShoppingList": {
+							"lastUpdatedStamp": 1510234245000,
+							"recurrenceInfoId": null,
+							"parentShoppingListId": null,
+							"createdTxStamp": 1510234245000,
+							"createdStamp": 1510234245000,
+							"productPromoCodeId": null,
+							"description": null,
+							"lastUpdatedTxStamp": 1510234245000,
+							"isActive": "Y",
+							"shoppingListTypeId": "SLT_SPEC_PURP",
+							"contactMechId": null,
+							"carrierPartyId": null,
+							"shoppingListId": "52750",
+							"currencyUom": null,
+							"lastOrderedDate": null,
+							"carrierRoleTypeId": null,
+							"paymentMethodId": null,
+							"isPublic": "N",
+							"productStoreId": "Globus_STORE",
+							"listName": "auto-save",
+							"lastAdminModified": null,
+							"partyId": "10001",
+							"shipmentMethodTypeId": null,
+							"visitorId": null
+							},
+							"status": "pass"
+							}]]></response>
+	</service>
+</services>

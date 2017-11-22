@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #ff6666}
+.failedeven td,.stripe .numi_attn {background-color: #ff6666}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>function drawChart () {    var data = new google.visualization.DataTable();    data.addColumn('string', 'Name');    data.addColumn('number', 'Value');    data.addRows([        ['Passed', 17],        ['Failed', 10],['Skipped', 0]    ]);        var total = google.visualization.data.group(data, [{        type: 'boolean',        column: 0,        modifier: function () {return true;}    }], [{        type: 'number',        column: 1,        aggregation: google.visualization.data.sum    }]);        data.addRow(['Total: ' + total.getValue(0, 1), 0]);        var chart = new google.visualization.PieChart(document.querySelector('#chart_div'));    chart.draw(data, {        height: 300,        width: 500,        sliceVisibilityThreshold: 0    });}google.load('visualization', '1', {packages:['corechart'], callback: drawChart});</script>
+</head>
+<body style='border-style: double;margin-right: 70px;margin-bottom: 10px;margin-left: 70px;margin:margin: 100px 150px 100px 80px;'>
+<center><br/><br/><img src='Sonata_Software_Logo.png' width='90' height='60'></img><h1>MyRestAutomate</h1><h2>Rezopia Rest Services Automation Report--14/10/2017</h2>
+<hr style='height:5;width:90%;border-top: solid blue;'></hr>
+<div id='chart_div'></div>
+<h3 style='color:blue;'>TestSuites Summary </h3>
+<table cellspacing="0" cellpadding="0" class="testOverview"  bgcolor='#F0F3F4'>
+<tr bgcolor='#DA70D6'><th>Test</th><th># passed</th><th># skipped</th><th># failed</th><th>Start<br/>Time</th><th>End<br/>Time</th><th>Total<br/>Time(hh:mm:ss)</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><th colspan="10">Rest testing</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1"><b>dependent_services_test</b></a></td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">15:04:14</td><td class="numi">15:04:17</td><td class="numi">00:00:02</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t2"><b>performance_test</b></a></td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">15:04:17</td><td class="numi">15:04:20</td><td class="numi">00:00:02</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t3"><b>security_services_test</b></a></td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">15:04:20</td><td class="numi">15:04:21</td><td class="numi">00:00:00</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t4"><b>Google Services</b></a></td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">15:04:21</td><td class="numi">15:04:22</td><td class="numi">00:00:01</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t5"><b>CountriesService</b></a></td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">15:04:22</td><td class="numi">15:04:24</td><td class="numi">00:00:02</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em"><a href="#t6"><b>Json_Response_Services</b></a></td><td class="numi">5</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">15:04:24</td><td class="numi">15:04:26</td><td class="numi">00:00:01</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">17</td><td class="numi">0</td><td class="numi_attn">10</td><td class="numi"> </td><td class="numi"> </td><td class="numi">00:00:11</td><td colspan="3">&nbsp;</td></tr>
+</table>
+<h3 style='color:blue;'>Test Cases Details Summary</h3>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary"  bgcolor='#F0F3F4'>
+<tr bgcolor='#DA70D6'><th>Class</th><th>Method</th><th>Exception</th><th>Start Time </th><th>Time<br/>(hh:mm:ss)</th></tr>
+<tr><th colspan="5">Rest testing</th></tr>
+<tr id="t1"><th colspan="5">dependent_services_test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">com.sonata.restautomate.services.test.DependentServicesTest</td><td><a href="#m1"><b>retriveAccountInformation</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:14</td><td class="numi">00:00:02</td></tr><tr class="passedodd"><td><a href="#m2"><b>retriveTransactionsInformationBasedOnAccount</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:16</td><td class="numi">00:00:01</td></tr>
+<tr id="t2"><th colspan="5">performance_test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">com.sonata.restautomate.services.test.PerformanceServicesTest</td><td><a href="#m3"><b>testResponseTimeAndCondition</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: 1 expectation failed.<br/></td><td style="text-align:right">15:04:17</td><td class="numi">00:00:03</td></tr><tr class="failedodd"><td><a href="#m4"><b>testResponseWrongTime</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: 1 expectation failed.<br/></td><td style="text-align:right">15:04:17</td><td class="numi">00:00:02</td></tr>
+<tr><th colspan="5">performance_test &#8212; passed</th></tr>
+<tr class="passedodd"><td>com.sonata.restautomate.services.test.PerformanceServicesTest</td><td><a href="#m5"><b>testResponseTime</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:17</td><td class="numi">00:00:02</td></tr>
+<tr id="t3"><th colspan="5">security_services_test &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.sonata.restautomate.services.test.SecureServicesTest</td><td><a href="#m6"><b>verifyPostRequest</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [&quot;message&quot;:&quot;Person added with id=6&quot;] but found [{&quot;message&quot;:&quot;Person name=Kumara, organisation=SonataSoftware already exists.&quot;}]<br/></td><td style="text-align:right">15:04:20</td><td class="numi">00:00:01</td></tr>
+<tr><th colspan="5">security_services_test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">com.sonata.restautomate.services.test.SecureServicesTest</td><td><a href="#m7"><b>secureServiceTestCorrectCredentails</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:20</td><td class="numi">00:00:00</td></tr><tr class="passedodd"><td><a href="#m8"><b>secureServiceTestWithWrongCredentails</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:20</td><td class="numi">00:00:00</td></tr>
+<tr id="t4"><th colspan="5">Google Services &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">com.sonata.restautomate.services.test.GoogleServiceTestes</td><td><a href="#m9"><b>verifyJsonWrongResponse</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [529 Kent St, Sydney NSW 2000, Australia Complete] but found [529 Kent St, Sydney NSW 2000, Australia]<br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:00</td></tr><tr class="failedodd"><td><a href="#m10"><b>verifyWrongParametr</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [Data In Correct] but found [The provided API key is invalid.]<br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:01</td></tr><tr class="failedodd"><td><a href="#m11"><b>verifyWrongXMLResponse</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [Maharshi Karve Road, Churchgate, Mumbai, Maharashtra 400020, India] but found [20 Church Ave, St Charles, MN 55972, USA]<br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:01</td></tr>
+<tr><th colspan="5">Google Services &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="3">com.sonata.restautomate.services.test.GoogleServiceTestes</td><td><a href="#m12"><b>verifyCorrectXMLResponse</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:00</td></tr><tr class="passedodd"><td><a href="#m13"><b>verifyJsonCorrectResponse</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:00</td></tr><tr class="passedodd"><td><a href="#m14"><b>verifyStatusCode</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:21</td><td class="numi">00:00:01</td></tr>
+<tr id="t5"><th colspan="5">CountriesService &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">com.sonata.restautomate.services.test.CountryServicesTest</td><td><a href="#m15"><b>verifyXmlResponseSingleFieldWrong</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [0000000] but found [12456]<br/></td><td style="text-align:right">15:04:23</td><td class="numi">00:00:00</td></tr><tr class="failedodd"><td><a href="#m16"><b>verifyXmlResponseWithConditions</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [0] but found [5]<br/></td><td style="text-align:right">15:04:23</td><td class="numi">00:00:00</td></tr><tr class="failedodd"><td><a href="#m17"><b>verifyXmlResponseWithMultipleConditions</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: 1 expectation failed.<br/></td><td style="text-align:right">15:04:23</td><td class="numi">00:00:01</td></tr>
+<tr><th colspan="5">CountriesService &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="4">com.sonata.restautomate.services.test.CountryServicesTest</td><td><a href="#m18"><b>checkCityForZipCode</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:22</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m19"><b>checkHeaderData</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:22</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m20"><b>verifyXmlResponseSingleField</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:22</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m21"><b>verifyXmlResponseWithcount</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:23</td><td class="numi">00:00:01</td></tr>
+<tr id="t6"><th colspan="5">Json_Response_Services &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.sonata.restautomate.services.test.RestAssuredGPathTest</td><td><a href="#m22"><b>extractAndCheckRangeParameterized</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: 1 expectation failed.<br/></td><td style="text-align:right">15:04:25</td><td class="numi">00:00:00</td></tr>
+<tr><th colspan="5">Json_Response_Services &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="5">com.sonata.restautomate.services.test.RestAssuredGPathTest</td><td><a href="#m23"><b>extractAndCheckArraySliceSize</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:24</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m24"><b>extractAndCheckMultipleValues</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:24</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m25"><b>extractAndCheckRange</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:24</td><td class="numi">00:00:01</td></tr><tr class="passedodd"><td><a href="#m26"><b>extractAndCheckRangeParameterized</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:25</td><td class="numi">00:00:00</td></tr><tr class="passedodd"><td><a href="#m27"><b>extractAndCheckSingleValue</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em"><br/></td><td style="text-align:right">15:04:25</td><td class="numi">00:00:00</td></tr>
+</table>
+<h3 style='color:blue;'>Test Cases Complete Details </h3>
+</center>
+<h1>dependent_services_test</h1>
+<h2 id="m1">com.sonata.restautomate.services.test.DependentServicesTest:retriveAccountInformation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.sonata.restautomate.services.test.DependentServicesTest:retriveTransactionsInformationBasedOnAccount</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>performance_test</h1>
+<h2 id="m3">com.sonata.restautomate.services.test.PerformanceServicesTest:testResponseTimeAndCondition</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+Expected response time was not a value less than &lt;1000L&gt; milliseconds, was 1760 milliseconds (1760 milliseconds).
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:81)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:244)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:163)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.time(ResponseSpecificationImpl.groovy:112)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:428)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:424)
+	at com.sonata.restautomate.services.test.PerformanceServicesTest.testResponseTimeAndCondition(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 20 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.sonata.restautomate.services.test.PerformanceServicesTest:testResponseWrongTime</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+Expected response time was not a value less than &lt;500L&gt; milliseconds, was 897 milliseconds (897 milliseconds).
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:81)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:232)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:244)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:163)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.time(ResponseSpecificationImpl.groovy:112)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:428)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:424)
+	at com.sonata.restautomate.services.test.PerformanceServicesTest.testResponseWrongTime(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 20 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.sonata.restautomate.services.test.PerformanceServicesTest:testResponseTime</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>security_services_test</h1>
+<h2 id="m6">com.sonata.restautomate.services.test.SecureServicesTest:verifyPostRequest</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [&quot;message&quot;:&quot;Person added with id=6&quot;] but found [{&quot;message&quot;:&quot;Person name=Kumara, organisation=SonataSoftware already exists.&quot;}]
+	at com.sonata.restautomate.services.test.SecureServicesTest.verifyPostRequest(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.sonata.restautomate.services.test.SecureServicesTest:secureServiceTestCorrectCredentails</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.sonata.restautomate.services.test.SecureServicesTest:secureServiceTestWithWrongCredentails</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Google Services</h1>
+<h2 id="m9">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyJsonWrongResponse</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [529 Kent St, Sydney NSW 2000, Australia Complete] but found [529 Kent St, Sydney NSW 2000, Australia]
+	at com.sonata.restautomate.services.test.GoogleServiceTestes.verifyJsonWrongResponse(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyWrongParametr</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [Data In Correct] but found [The provided API key is invalid.]
+	at com.sonata.restautomate.services.test.GoogleServiceTestes.verifyWrongParametr(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyWrongXMLResponse</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [Maharshi Karve Road, Churchgate, Mumbai, Maharashtra 400020, India] but found [20 Church Ave, St Charles, MN 55972, USA]
+	at com.sonata.restautomate.services.test.GoogleServiceTestes.verifyWrongXMLResponse(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyCorrectXMLResponse</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyJsonCorrectResponse</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.sonata.restautomate.services.test.GoogleServiceTestes:verifyStatusCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>CountriesService</h1>
+<h2 id="m15">com.sonata.restautomate.services.test.CountryServicesTest:verifyXmlResponseSingleFieldWrong</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [0000000] but found [12456]
+	at com.sonata.restautomate.services.test.CountryServicesTest.verifyXmlResponseSingleFieldWrong(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.sonata.restautomate.services.test.CountryServicesTest:verifyXmlResponseWithConditions</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [0] but found [5]
+	at com.sonata.restautomate.services.test.CountryServicesTest.verifyXmlResponseWithConditions(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.sonata.restautomate.services.test.CountryServicesTest:verifyXmlResponseWithMultipleConditions</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+XML path customer.lastName doesn&apos;t match.
+Expected: Doe
+  Actual: Smith
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:81)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:244)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:163)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
+	at com.jayway.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
+	at com.sonata.restautomate.services.test.CountryServicesTest.verifyXmlResponseWithMultipleConditions(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 19 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.sonata.restautomate.services.test.CountryServicesTest:checkCityForZipCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.sonata.restautomate.services.test.CountryServicesTest:checkHeaderData</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.sonata.restautomate.services.test.CountryServicesTest:verifyXmlResponseSingleField</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.sonata.restautomate.services.test.CountryServicesTest:verifyXmlResponseWithcount</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Json_Response_Services</h1>
+<h2 id="m22">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckRangeParameterized</h2>
+<table cellspacing="0" cellpadding="0" class="result"  bgcolor='#F0F3F4'>
+<tr class="param"><th>Param.1</th><th>Param.2</th><th>Param.3</th><th>Param.4</th></tr>
+<tr class="param stripe"><td>30</td>
+<td>40</td>
+<td>33</td>
+<td>31</td>
+</tr>
+<tr><td colspan="4">
+<div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+JSON path MRData.DriverTable.Drivers.findAll{Drivers-&gt;Drivers.permanentNumber &gt;= &quot;30&quot; &amp;&amp; Drivers.permanentNumber &lt;= &quot;40&quot;}.permanentNumber doesn&apos;t match.
+Expected: not a collection containing &quot;31&quot;
+  Actual: [31, 30, 33]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:81)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:244)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:163)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
+	at com.jayway.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at com.jayway.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
+	at com.sonata.restautomate.services.test.RestAssuredGPathTest.extractAndCheckRangeParameterized(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 19 stack frames</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckArraySliceSize</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckMultipleValues</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckRange</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckRangeParameterized</h2>
+<table cellspacing="0" cellpadding="0" class="result"  bgcolor='#F0F3F4'>
+<tr class="param"><th>Param.1</th><th>Param.2</th><th>Param.3</th><th>Param.4</th></tr>
+<tr class="param stripe"><td>1</td>
+<td>9</td>
+<td>9</td>
+<td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckRangeParameterized</h2>
+<table cellspacing="0" cellpadding="0" class="result"  bgcolor='#F0F3F4'>
+<tr class="param"><th>Param.1</th><th>Param.2</th><th>Param.3</th><th>Param.4</th></tr>
+<tr class="param stripe"><td>20</td>
+<td>30</td>
+<td>22</td>
+<td>25</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.sonata.restautomate.services.test.RestAssuredGPathTest:extractAndCheckSingleValue</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<center><b>RestAutomate @ CopyRights</b> </center>
+</body></html>
